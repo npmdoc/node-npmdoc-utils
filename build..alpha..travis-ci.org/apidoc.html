@@ -1,0 +1,4963 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jonschlinkert/utils"
+
+    >utils (v0.3.1)</a>
+</h1>
+<h4>Fast, generic JavaScript/node.js utility functions.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utils">module utils</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utils.</span>_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utils.</span>array</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utils.</span>collection</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utils.</span>fs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utils.</span>function</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utils.</span>lang</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utils.</span>math</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utils.</span>object</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utils.</span>string</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utils._">module utils._</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.after">
+            function <span class="apidocSignatureSpan">utils._.</span>after
+            <span class="apidocSignatureSpan">(arr, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.any">
+            function <span class="apidocSignatureSpan">utils._.</span>any
+            <span class="apidocSignatureSpan">(value, fn, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.arrayify">
+            function <span class="apidocSignatureSpan">utils._.</span>arrayify
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.before">
+            function <span class="apidocSignatureSpan">utils._.</span>before
+            <span class="apidocSignatureSpan">(arr, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.camelcase">
+            function <span class="apidocSignatureSpan">utils._.</span>camelcase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.centerAlign">
+            function <span class="apidocSignatureSpan">utils._.</span>centerAlign
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.chop">
+            function <span class="apidocSignatureSpan">utils._.</span>chop
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.compact">
+            function <span class="apidocSignatureSpan">utils._.</span>compact
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.contains">
+            function <span class="apidocSignatureSpan">utils._.</span>contains
+            <span class="apidocSignatureSpan">(collection, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.count">
+            function <span class="apidocSignatureSpan">utils._.</span>count
+            <span class="apidocSignatureSpan">(str, sub)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.dashcase">
+            function <span class="apidocSignatureSpan">utils._.</span>dashcase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.defaults">
+            function <span class="apidocSignatureSpan">utils._.</span>defaults
+            <span class="apidocSignatureSpan">(o, objects)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.difference">
+            function <span class="apidocSignatureSpan">utils._.</span>difference
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.dotcase">
+            function <span class="apidocSignatureSpan">utils._.</span>dotcase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.each">
+            function <span class="apidocSignatureSpan">utils._.</span>each
+            <span class="apidocSignatureSpan">(arr, cb, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.ellipsis">
+            function <span class="apidocSignatureSpan">utils._.</span>ellipsis
+            <span class="apidocSignatureSpan">(str, limit, ch)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.extend">
+            function <span class="apidocSignatureSpan">utils._.</span>extend
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.filter">
+            function <span class="apidocSignatureSpan">utils._.</span>filter
+            <span class="apidocSignatureSpan">(o, cb, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.first">
+            function <span class="apidocSignatureSpan">utils._.</span>first
+            <span class="apidocSignatureSpan">(arr, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.flatten">
+            function <span class="apidocSignatureSpan">utils._.</span>flatten
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.forEach">
+            function <span class="apidocSignatureSpan">utils._.</span>forEach
+            <span class="apidocSignatureSpan">(arr, cb, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.forIn">
+            function <span class="apidocSignatureSpan">utils._.</span>forIn
+            <span class="apidocSignatureSpan">(obj, fn, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.forOwn">
+            function <span class="apidocSignatureSpan">utils._.</span>forOwn
+            <span class="apidocSignatureSpan">(obj, fn, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.functions">
+            function <span class="apidocSignatureSpan">utils._.</span>functions
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.hasOwn">
+            function <span class="apidocSignatureSpan">utils._.</span>hasOwn
+            <span class="apidocSignatureSpan">(o, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.hasValues">
+            function <span class="apidocSignatureSpan">utils._.</span>hasValues
+            <span class="apidocSignatureSpan">(o, noZero)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.hyphenate">
+            function <span class="apidocSignatureSpan">utils._.</span>hyphenate
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.identity">
+            function <span class="apidocSignatureSpan">utils._.</span>identity
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.indexOf">
+            function <span class="apidocSignatureSpan">utils._.</span>indexOf
+            <span class="apidocSignatureSpan">(arr, ele, start)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.isArray">
+            function <span class="apidocSignatureSpan">utils._.</span>isArray
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.isEmpty">
+            function <span class="apidocSignatureSpan">utils._.</span>isEmpty
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.isObject">
+            function <span class="apidocSignatureSpan">utils._.</span>isObject
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.isPlainObject">
+            function <span class="apidocSignatureSpan">utils._.</span>isPlainObject
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.isString">
+            function <span class="apidocSignatureSpan">utils._.</span>isString
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.keys">
+            function <span class="apidocSignatureSpan">utils._.</span>keys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.last">
+            function <span class="apidocSignatureSpan">utils._.</span>last
+            <span class="apidocSignatureSpan">(arr, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.map">
+            function <span class="apidocSignatureSpan">utils._.</span>map
+            <span class="apidocSignatureSpan">(arr, fn, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.mapValues">
+            function <span class="apidocSignatureSpan">utils._.</span>mapValues
+            <span class="apidocSignatureSpan">(obj, cb, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.merge">
+            function <span class="apidocSignatureSpan">utils._.</span>merge
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.methods">
+            function <span class="apidocSignatureSpan">utils._.</span>methods
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.noop">
+            function <span class="apidocSignatureSpan">utils._.</span>noop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.omit">
+            function <span class="apidocSignatureSpan">utils._.</span>omit
+            <span class="apidocSignatureSpan">(obj, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.partialRight">
+            function <span class="apidocSignatureSpan">utils._.</span>partialRight
+            <span class="apidocSignatureSpan">(ctx, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.pascalcase">
+            function <span class="apidocSignatureSpan">utils._.</span>pascalcase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.pathcase">
+            function <span class="apidocSignatureSpan">utils._.</span>pathcase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.pick">
+            function <span class="apidocSignatureSpan">utils._.</span>pick
+            <span class="apidocSignatureSpan">(obj, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.pluck">
+            function <span class="apidocSignatureSpan">utils._.</span>pluck
+            <span class="apidocSignatureSpan">(obj, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.prop">
+            function <span class="apidocSignatureSpan">utils._.</span>prop
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.reduce">
+            function <span class="apidocSignatureSpan">utils._.</span>reduce
+            <span class="apidocSignatureSpan">(o, fn, acc, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.replace">
+            function <span class="apidocSignatureSpan">utils._.</span>replace
+            <span class="apidocSignatureSpan">(str, a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.result">
+            function <span class="apidocSignatureSpan">utils._.</span>result
+            <span class="apidocSignatureSpan">(o, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.reverse">
+            function <span class="apidocSignatureSpan">utils._.</span>reverse
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.rightAlign">
+            function <span class="apidocSignatureSpan">utils._.</span>rightAlign
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.sentencecase">
+            function <span class="apidocSignatureSpan">utils._.</span>sentencecase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.slice">
+            function <span class="apidocSignatureSpan">utils._.</span>slice
+            <span class="apidocSignatureSpan">(arr, start, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.slugify">
+            function <span class="apidocSignatureSpan">utils._.</span>slugify
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.snakecase">
+            function <span class="apidocSignatureSpan">utils._.</span>snakecase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.some">
+            function <span class="apidocSignatureSpan">utils._.</span>some
+            <span class="apidocSignatureSpan">(obj, cb, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.sort">
+            function <span class="apidocSignatureSpan">utils._.</span>sort
+            <span class="apidocSignatureSpan">(arr, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.sum">
+            function <span class="apidocSignatureSpan">utils._.</span>sum
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.toString">
+            function <span class="apidocSignatureSpan">utils._.</span>toString
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.truncate">
+            function <span class="apidocSignatureSpan">utils._.</span>truncate
+            <span class="apidocSignatureSpan">(str, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.tryRead">
+            function <span class="apidocSignatureSpan">utils._.</span>tryRead
+            <span class="apidocSignatureSpan">(fp)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.tryReaddir">
+            function <span class="apidocSignatureSpan">utils._.</span>tryReaddir
+            <span class="apidocSignatureSpan">(dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.tryRequire">
+            function <span class="apidocSignatureSpan">utils._.</span>tryRequire
+            <span class="apidocSignatureSpan">(fp)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.typeOf">
+            function <span class="apidocSignatureSpan">utils._.</span>typeOf
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.union">
+            function <span class="apidocSignatureSpan">utils._.</span>union
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.unique">
+            function <span class="apidocSignatureSpan">utils._.</span>unique
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils._.wordwrap">
+            function <span class="apidocSignatureSpan">utils._.</span>wordwrap
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utils.array">module utils.array</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.after">
+            function <span class="apidocSignatureSpan">utils.array.</span>after
+            <span class="apidocSignatureSpan">(arr, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.arrayify">
+            function <span class="apidocSignatureSpan">utils.array.</span>arrayify
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.before">
+            function <span class="apidocSignatureSpan">utils.array.</span>before
+            <span class="apidocSignatureSpan">(arr, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.compact">
+            function <span class="apidocSignatureSpan">utils.array.</span>compact
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.difference">
+            function <span class="apidocSignatureSpan">utils.array.</span>difference
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.each">
+            function <span class="apidocSignatureSpan">utils.array.</span>each
+            <span class="apidocSignatureSpan">(arr, cb, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.first">
+            function <span class="apidocSignatureSpan">utils.array.</span>first
+            <span class="apidocSignatureSpan">(arr, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.flatten">
+            function <span class="apidocSignatureSpan">utils.array.</span>flatten
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.forEach">
+            function <span class="apidocSignatureSpan">utils.array.</span>forEach
+            <span class="apidocSignatureSpan">(arr, cb, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.indexOf">
+            function <span class="apidocSignatureSpan">utils.array.</span>indexOf
+            <span class="apidocSignatureSpan">(arr, ele, start)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.isArray">
+            function <span class="apidocSignatureSpan">utils.array.</span>isArray
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.last">
+            function <span class="apidocSignatureSpan">utils.array.</span>last
+            <span class="apidocSignatureSpan">(arr, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.map">
+            function <span class="apidocSignatureSpan">utils.array.</span>map
+            <span class="apidocSignatureSpan">(arr, fn, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.slice">
+            function <span class="apidocSignatureSpan">utils.array.</span>slice
+            <span class="apidocSignatureSpan">(arr, start, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.sort">
+            function <span class="apidocSignatureSpan">utils.array.</span>sort
+            <span class="apidocSignatureSpan">(arr, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.union">
+            function <span class="apidocSignatureSpan">utils.array.</span>union
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.array.unique">
+            function <span class="apidocSignatureSpan">utils.array.</span>unique
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utils.collection">module utils.collection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.collection.any">
+            function <span class="apidocSignatureSpan">utils.collection.</span>any
+            <span class="apidocSignatureSpan">(value, fn, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.collection.contains">
+            function <span class="apidocSignatureSpan">utils.collection.</span>contains
+            <span class="apidocSignatureSpan">(collection, val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utils.fs">module utils.fs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.fs.tryRead">
+            function <span class="apidocSignatureSpan">utils.fs.</span>tryRead
+            <span class="apidocSignatureSpan">(fp)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.fs.tryReaddir">
+            function <span class="apidocSignatureSpan">utils.fs.</span>tryReaddir
+            <span class="apidocSignatureSpan">(dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.fs.tryRequire">
+            function <span class="apidocSignatureSpan">utils.fs.</span>tryRequire
+            <span class="apidocSignatureSpan">(fp)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utils.function">module utils.function</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.function.identity">
+            function <span class="apidocSignatureSpan">utils.function.</span>identity
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.function.noop">
+            function <span class="apidocSignatureSpan">utils.function.</span>noop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.function.partialRight">
+            function <span class="apidocSignatureSpan">utils.function.</span>partialRight
+            <span class="apidocSignatureSpan">(ctx, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utils.lang">module utils.lang</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.lang.hasValues">
+            function <span class="apidocSignatureSpan">utils.lang.</span>hasValues
+            <span class="apidocSignatureSpan">(o, noZero)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.lang.isEmpty">
+            function <span class="apidocSignatureSpan">utils.lang.</span>isEmpty
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.lang.isObject">
+            function <span class="apidocSignatureSpan">utils.lang.</span>isObject
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.lang.isPlainObject">
+            function <span class="apidocSignatureSpan">utils.lang.</span>isPlainObject
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.lang.typeOf">
+            function <span class="apidocSignatureSpan">utils.lang.</span>typeOf
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utils.math">module utils.math</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.math.sum">
+            function <span class="apidocSignatureSpan">utils.math.</span>sum
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utils.object">module utils.object</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.defaults">
+            function <span class="apidocSignatureSpan">utils.object.</span>defaults
+            <span class="apidocSignatureSpan">(o, objects)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.extend">
+            function <span class="apidocSignatureSpan">utils.object.</span>extend
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.filter">
+            function <span class="apidocSignatureSpan">utils.object.</span>filter
+            <span class="apidocSignatureSpan">(o, cb, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.forIn">
+            function <span class="apidocSignatureSpan">utils.object.</span>forIn
+            <span class="apidocSignatureSpan">(obj, fn, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.forOwn">
+            function <span class="apidocSignatureSpan">utils.object.</span>forOwn
+            <span class="apidocSignatureSpan">(obj, fn, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.functions">
+            function <span class="apidocSignatureSpan">utils.object.</span>functions
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.hasOwn">
+            function <span class="apidocSignatureSpan">utils.object.</span>hasOwn
+            <span class="apidocSignatureSpan">(o, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.keys">
+            function <span class="apidocSignatureSpan">utils.object.</span>keys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.mapValues">
+            function <span class="apidocSignatureSpan">utils.object.</span>mapValues
+            <span class="apidocSignatureSpan">(obj, cb, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.merge">
+            function <span class="apidocSignatureSpan">utils.object.</span>merge
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.methods">
+            function <span class="apidocSignatureSpan">utils.object.</span>methods
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.omit">
+            function <span class="apidocSignatureSpan">utils.object.</span>omit
+            <span class="apidocSignatureSpan">(obj, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.pick">
+            function <span class="apidocSignatureSpan">utils.object.</span>pick
+            <span class="apidocSignatureSpan">(obj, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.pluck">
+            function <span class="apidocSignatureSpan">utils.object.</span>pluck
+            <span class="apidocSignatureSpan">(obj, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.prop">
+            function <span class="apidocSignatureSpan">utils.object.</span>prop
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.reduce">
+            function <span class="apidocSignatureSpan">utils.object.</span>reduce
+            <span class="apidocSignatureSpan">(o, fn, acc, thisArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.result">
+            function <span class="apidocSignatureSpan">utils.object.</span>result
+            <span class="apidocSignatureSpan">(o, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.object.some">
+            function <span class="apidocSignatureSpan">utils.object.</span>some
+            <span class="apidocSignatureSpan">(obj, cb, thisArg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utils.string">module utils.string</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.camelcase">
+            function <span class="apidocSignatureSpan">utils.string.</span>camelcase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.centerAlign">
+            function <span class="apidocSignatureSpan">utils.string.</span>centerAlign
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.chop">
+            function <span class="apidocSignatureSpan">utils.string.</span>chop
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.count">
+            function <span class="apidocSignatureSpan">utils.string.</span>count
+            <span class="apidocSignatureSpan">(str, sub)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.dashcase">
+            function <span class="apidocSignatureSpan">utils.string.</span>dashcase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.dotcase">
+            function <span class="apidocSignatureSpan">utils.string.</span>dotcase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.ellipsis">
+            function <span class="apidocSignatureSpan">utils.string.</span>ellipsis
+            <span class="apidocSignatureSpan">(str, limit, ch)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.hyphenate">
+            function <span class="apidocSignatureSpan">utils.string.</span>hyphenate
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.isString">
+            function <span class="apidocSignatureSpan">utils.string.</span>isString
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.pascalcase">
+            function <span class="apidocSignatureSpan">utils.string.</span>pascalcase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.pathcase">
+            function <span class="apidocSignatureSpan">utils.string.</span>pathcase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.replace">
+            function <span class="apidocSignatureSpan">utils.string.</span>replace
+            <span class="apidocSignatureSpan">(str, a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.reverse">
+            function <span class="apidocSignatureSpan">utils.string.</span>reverse
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.rightAlign">
+            function <span class="apidocSignatureSpan">utils.string.</span>rightAlign
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.sentencecase">
+            function <span class="apidocSignatureSpan">utils.string.</span>sentencecase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.slugify">
+            function <span class="apidocSignatureSpan">utils.string.</span>slugify
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.snakecase">
+            function <span class="apidocSignatureSpan">utils.string.</span>snakecase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.toString">
+            function <span class="apidocSignatureSpan">utils.string.</span>toString
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.truncate">
+            function <span class="apidocSignatureSpan">utils.string.</span>truncate
+            <span class="apidocSignatureSpan">(str, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utils.string.wordwrap">
+            function <span class="apidocSignatureSpan">utils.string.</span>wordwrap
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utils" id="apidoc.module.utils">module utils</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utils._" id="apidoc.module.utils._">module utils._</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.after" id="apidoc.element.utils._.after">
+        function <span class="apidocSignatureSpan">utils._.</span>after
+        <span class="apidocSignatureSpan">(arr, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function after_(arr, n) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.after() expects an array.&#x27;);
+  }
+  return arr ? arr.slice(n) : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @return {Array} Array exluding `n` items.
+ * @crosslink before
+ * @api public
+ */
+
+module.exports = function after_(arr, n) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">after</span>() expects an array.&#x27;);
+  }
+  return arr ? arr.slice(n) : null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.any" id="apidoc.element.utils._.any">
+        function <span class="apidocSignatureSpan">utils._.</span>any
+        <span class="apidocSignatureSpan">(value, fn, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function any(value, fn, thisArg) {
+  if (value == null) {
+    return false;
+  }
+
+  // strings
+  if(typeof value === &#x27;string&#x27; &#x26;&#x26; typeof fn === &#x27;string&#x27;) {
+    return value.indexOf(fn) !== -1;
+  }
+
+  // object key
+  if (typeof fn === &#x27;string&#x27;) {
+    if (value.hasOwnProperty(fn)) {
+      return true;
+    }
+  }
+
+  fn = iterator(fn, thisArg);
+  var res = false;
+
+  // arrays or arguments
+  if(typeof value.length === &#x27;number&#x27;) {
+    var len = value.length;
+    var i = -1;
+
+    while (++i &#x3c; len) {
+      if (fn(value[i], i, value)) {
+        res = true;
+        break;
+      }
+    }
+
+  // object properties/values
+  } else {
+    forOwn(value, function (val, key) {
+      if (fn(val, key, value)) {
+        res = true;
+        return false;
+      }
+    });
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.arrayify" id="apidoc.element.utils._.arrayify">
+        function <span class="apidocSignatureSpan">utils._.</span>arrayify
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function arrayify(val) {
+  return !Array.isArray(val) ? [val] : val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.before" id="apidoc.element.utils._.before">
+        function <span class="apidocSignatureSpan">utils._.</span>before
+        <span class="apidocSignatureSpan">(arr, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function before(arr, n) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.before() expects an array.&#x27;);
+  }
+  return arr ? arr.slice(0, -n) : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @return {Array} Array excluding items after the given number.
+ * @crosslink after
+ * @api public
+ */
+
+module.exports = function before(arr, n) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">before</span>() expects an array.&#x27;);
+  }
+  return arr ? arr.slice(0, -n) : null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.camelcase" id="apidoc.element.utils._.camelcase">
+        function <span class="apidocSignatureSpan">utils._.</span>camelcase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function camelcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[-_.\W\s]+(\w|$)/g;
+  return chop(str).replace(re, function (_, ch) {
+    return ch.toUpperCase();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.centerAlign" id="apidoc.element.utils._.centerAlign">
+        function <span class="apidocSignatureSpan">utils._.</span>centerAlign
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function centerAlign(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return alignCenter(str, &#x27;&#x26;nbsp;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.chop" id="apidoc.element.utils._.chop">
+        function <span class="apidocSignatureSpan">utils._.</span>chop
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function chop(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  var re = /^[-_.\W\s]+|[-_.\W\s]+$/g;
+  return str.trim().replace(re, &#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.compact" id="apidoc.element.utils._.compact">
+        function <span class="apidocSignatureSpan">utils._.</span>compact
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compact(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.compact() expects an array.&#x27;);
+  }
+  return arr.filter(Boolean);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Array} `arr`
+ * @return {Array}
+ * @api public
+ */
+
+module.exports = function compact(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">compact</span>() expects an array.&#x27;);
+  }
+  return arr.filter(Boolean);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.contains" id="apidoc.element.utils._.contains">
+        function <span class="apidocSignatureSpan">utils._.</span>contains
+        <span class="apidocSignatureSpan">(collection, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function contains(collection, val) {
+  if (Array.isArray(collection)) {
+    return indexOf(collection, val) !== -1;
+  }
+  return some(collection, function (v) {
+    return (v === val);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.count" id="apidoc.element.utils._.count">
+        function <span class="apidocSignatureSpan">utils._.</span>count
+        <span class="apidocSignatureSpan">(str, sub)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function count(str, sub) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return sub ? (str.split(sub).length - 1) : &#x27;0&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.dashcase" id="apidoc.element.utils._.dashcase">
+        function <span class="apidocSignatureSpan">utils._.</span>dashcase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dashcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[-_.\W\s]+(\w|$)/g;
+  return chop(str).replace(re, function (_, ch) {
+    return &#x27;-&#x27; + ch;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.defaults" id="apidoc.element.utils._.defaults">
+        function <span class="apidocSignatureSpan">utils._.</span>defaults
+        <span class="apidocSignatureSpan">(o, objects)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defaults(o, objects) {
+  if (o == null) return {};
+
+  each(slice(arguments, 1), function (obj) {
+    if (isObject(obj)) {
+      forOwn(obj, function (val, key) {
+        if (o[key] == null) {
+          o[key] = val;
+        }
+      });
+    }
+  });
+  return o;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.difference" id="apidoc.element.utils._.difference">
+        function <span class="apidocSignatureSpan">utils._.</span>difference
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function difference_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.difference() expects an array.&#x27;);
+  }
+  return diff.apply(diff, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {Array} `b`
+ * @return {Array}
+ * @api public
+ */
+
+module.exports = function difference_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">difference</span>() expects an array.&#x27;);
+  }
+  return diff.apply(diff, arguments);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.dotcase" id="apidoc.element.utils._.dotcase">
+        function <span class="apidocSignatureSpan">utils._.</span>dotcase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dotcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[-_.\W\s]+(\w|$)/g;
+  return chop(str).replace(re, function (_, ch) {
+    return &#x27;.&#x27; + ch;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.each" id="apidoc.element.utils._.each">
+        function <span class="apidocSignatureSpan">utils._.</span>each
+        <span class="apidocSignatureSpan">(arr, cb, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function each(arr, cb, thisArg) {
+  if (arr == null) return;
+
+  var len = arr.length, i = -1;
+
+  while (len--) {
+    var ele = arr[++i];
+    if (cb.call(thisArg, ele, i, arr) === false) {
+      break;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.ellipsis" id="apidoc.element.utils._.ellipsis">
+        function <span class="apidocSignatureSpan">utils._.</span>ellipsis
+        <span class="apidocSignatureSpan">(str, limit, ch)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ellipsis(str, limit, ch) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return truncate(str, limit) + (ch || &#x27;…&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.extend" id="apidoc.element.utils._.extend">
+        function <span class="apidocSignatureSpan">utils._.</span>extend
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(o) {
+  if (!isPlainObject(o)) { return {}; }
+  var args = arguments;
+  var len = args.length - 1;
+
+  for (var i = 0; i &#x3c; len; i++) {
+    var obj = args[i + 1];
+
+    if (isPlainObject(obj)) {
+      for (var key in obj) {
+        if (hasOwn(obj, key)) {
+          o[key] = obj[key];
+        }
+      }
+    }
+  }
+  return o;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.filter" id="apidoc.element.utils._.filter">
+        function <span class="apidocSignatureSpan">utils._.</span>filter
+        <span class="apidocSignatureSpan">(o, cb, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function filter(o, cb, thisArg) {
+  cb = makeIterator(cb, thisArg);
+  var filtered = {};
+
+  forOwn(o, function (value, key, o) {
+    if (cb(value, key, o)) {
+      filtered[key] = value;
+    }
+  });
+
+  return filtered;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api public
+ */
+
+module.exports = function compact(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.compact() expects an array.&#x27;);
+  }
+  return arr.<span class="apidocCodeKeywordSpan">filter</span>(Boolean);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.first" id="apidoc.element.utils._.first">
+        function <span class="apidocSignatureSpan">utils._.</span>first
+        <span class="apidocSignatureSpan">(arr, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function first(arr, fn) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.first() expects an array.&#x27;);
+  }
+
+  var len = arr.length;
+  if (len === 0) {
+    return [];
+  }
+
+  if (!fn) return arr[0];
+
+  if (isNumber(fn)) {
+    return arr.slice(0, fn);
+  }
+
+  if (typeof fn === &#x27;function&#x27;) {
+    var val, i = 0;
+
+    while (len--) {
+      val = arr[i++];
+      if (fn(val, i, arr)) {
+        return val;
+      }
+    }
+  }
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Number} `n` Number of items to return, starting at `0`.
+ * @return {Array}
+ * @api public
+ */
+
+module.exports = function first(arr, fn) {
+if (!Array.isArray(arr)) {
+  throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">first</span>() expects an array.&#x27;);
+}
+
+var len = arr.length;
+if (len === 0) {
+  return [];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.flatten" id="apidoc.element.utils._.flatten">
+        function <span class="apidocSignatureSpan">utils._.</span>flatten
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function flatten(arr) {
+  return flat(arr, []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.forEach" id="apidoc.element.utils._.forEach">
+        function <span class="apidocSignatureSpan">utils._.</span>forEach
+        <span class="apidocSignatureSpan">(arr, cb, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function each(arr, cb, thisArg) {
+  if (arr == null) return;
+
+  var len = arr.length, i = -1;
+
+  while (len--) {
+    var ele = arr[++i];
+    if (cb.call(thisArg, ele, i, arr) === false) {
+      break;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.forIn" id="apidoc.element.utils._.forIn">
+        function <span class="apidocSignatureSpan">utils._.</span>forIn
+        <span class="apidocSignatureSpan">(obj, fn, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function forIn(obj, fn, thisArg) {
+  for (var key in obj) {
+    if (fn.call(thisArg, obj[key], key, obj) === false) {
+      break;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.forOwn" id="apidoc.element.utils._.forOwn">
+        function <span class="apidocSignatureSpan">utils._.</span>forOwn
+        <span class="apidocSignatureSpan">(obj, fn, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function forOwn(obj, fn, thisArg) {
+  forIn(obj, function(val, key) {
+    if (hasOwn.call(obj, key)) {
+      return fn.call(thisArg, obj[key], key, obj);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.functions" id="apidoc.element.utils._.functions">
+        function <span class="apidocSignatureSpan">utils._.</span>functions
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function functions(obj) {
+  var res = {};
+
+  forIn(obj, function (val, key) {
+    if (typeof val === &#x27;function&#x27;) {
+      res[key] = val;
+    }
+  });
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.hasOwn" id="apidoc.element.utils._.hasOwn">
+        function <span class="apidocSignatureSpan">utils._.</span>hasOwn
+        <span class="apidocSignatureSpan">(o, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasOwn(o, key) {
+  return {}.hasOwnProperty.call(o, key);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.hasValues" id="apidoc.element.utils._.hasValues">
+        function <span class="apidocSignatureSpan">utils._.</span>hasValues
+        <span class="apidocSignatureSpan">(o, noZero)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasValue(o, noZero) {
+  if (o === null || o === undefined) {
+    return false;
+  }
+
+  if (typeof o === &#x27;boolean&#x27;) {
+    return true;
+  }
+
+  if (typeof o === &#x27;number&#x27;) {
+    if (o === 0 &#x26;&#x26; noZero === true) {
+      return false;
+    }
+    return true;
+  }
+
+  if (o.length !== undefined) {
+    return o.length !== 0;
+  }
+
+  for (var key in o) {
+    if (o.hasOwnProperty(key)) {
+      return true;
+    }
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.hyphenate" id="apidoc.element.utils._.hyphenate">
+        function <span class="apidocSignatureSpan">utils._.</span>hyphenate
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hyphenate(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return chop(str).split(&#x27; &#x27;).join(&#x27;-&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.identity" id="apidoc.element.utils._.identity">
+        function <span class="apidocSignatureSpan">utils._.</span>identity
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(val) {
+  return val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.indexOf" id="apidoc.element.utils._.indexOf">
+        function <span class="apidocSignatureSpan">utils._.</span>indexOf
+        <span class="apidocSignatureSpan">(arr, ele, start)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function indexOf(arr, ele, start) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.indexOf() expects an array.&#x27;);
+  }
+
+  if (typeof ele === &#x27;undefined&#x27;) return -1;
+  start = start || 0;
+
+  var len = arr.length;
+  var i = start &#x3c; 0
+    ? len + start
+    : start;
+
+  while (i &#x3c; len) {
+    if (arr[i] === ele) {
+      return i;
+    }
+    i++;
+  }
+  return -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {String} `ele` The element to find.
+ * @param  {Array} `start` Starting index.
+ * @return {Number} Returns the index of `ele` or `-1`
+ */
+
+module.exports = function indexOf(arr, ele, start) {
+if (!Array.isArray(arr)) {
+  throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">indexOf</span>() expects an array.&#x27;);
+}
+
+if (typeof ele === &#x27;undefined&#x27;) return -1;
+start = start || 0;
+
+var len = arr.length;
+var i = start &#x3c; 0
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.isArray" id="apidoc.element.utils._.isArray">
+        function <span class="apidocSignatureSpan">utils._.</span>isArray
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArray(value) {
+  return Array.isArray(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Number} `n` Starting index (number of items to exclude)
+ * @return {Array} Array exluding `n` items.
+ * @crosslink before
+ * @api public
+ */
+
+module.exports = function after_(arr, n) {
+  if (!Array.<span class="apidocCodeKeywordSpan">isArray</span>(arr)) {
+    throw new TypeError(&#x27;utils#array.after() expects an array.&#x27;);
+  }
+  return arr ? arr.slice(n) : null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.isEmpty" id="apidoc.element.utils._.isEmpty">
+        function <span class="apidocSignatureSpan">utils._.</span>isEmpty
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isEmpty(val) {
+  return !hasValues(val);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.isObject" id="apidoc.element.utils._.isObject">
+        function <span class="apidocSignatureSpan">utils._.</span>isObject
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isObject(val) {
+  return typeOf(val) === &#x27;object&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.isPlainObject" id="apidoc.element.utils._.isPlainObject">
+        function <span class="apidocSignatureSpan">utils._.</span>isPlainObject
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isPlainObject(o) {
+  var ctor,prot;
+
+  if (isObjectObject(o) === false) return false;
+
+  // If has modified constructor
+  ctor = o.constructor;
+  if (typeof ctor !== &#x27;function&#x27;) return false;
+
+  // If has modified prototype
+  prot = ctor.prototype;
+  if (isObjectObject(prot) === false) return false;
+
+  // If constructor does not have an Object-specific method
+  if (prot.hasOwnProperty(&#x27;isPrototypeOf&#x27;) === false) {
+    return false;
+  }
+
+  // Most likely a plain Object
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.isString" id="apidoc.element.utils._.isString">
+        function <span class="apidocSignatureSpan">utils._.</span>isString
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isString(str) {
+  return str &#x26;&#x26; typeof str === &#x27;string&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.keys" id="apidoc.element.utils._.keys">
+        function <span class="apidocSignatureSpan">utils._.</span>keys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function keys() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.last" id="apidoc.element.utils._.last">
+        function <span class="apidocSignatureSpan">utils._.</span>last
+        <span class="apidocSignatureSpan">(arr, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function last_(arr, fn) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.last() expects an array.&#x27;);
+  }
+
+  var len = arr.length;
+  if (len === 0) {
+    return [];
+  }
+
+  if (!fn) return arr[arr.length - 1];
+
+  if (isNumber(fn)) {
+    return arr.slice(-fn);
+  }
+
+  if (typeof fn === &#x27;function&#x27;) {
+    var val, i = 0;
+
+    while (len--) {
+      val = arr[i++];
+      if (fn(val, i, arr)) {
+        return val;
+      }
+    }
+  }
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Number} `n` Number of items to return, starting with the last item.
+ * @return {Array}
+ * @api public
+ */
+
+module.exports = function last_(arr, fn) {
+if (!Array.isArray(arr)) {
+  throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">last</span>() expects an array.&#x27;);
+}
+
+var len = arr.length;
+if (len === 0) {
+  return [];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.map" id="apidoc.element.utils._.map">
+        function <span class="apidocSignatureSpan">utils._.</span>map
+        <span class="apidocSignatureSpan">(arr, fn, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function map(arr, fn, thisArg) {
+  if (arr == null) return [];
+  fn = iterator(fn, thisArg);
+
+  var len = arr.length;
+  var res = new Array(len);
+
+  for (var i = 0; i &#x3c; len; i++) {
+    res[i] = fn(arr[i], i, arr);
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.mapValues" id="apidoc.element.utils._.mapValues">
+        function <span class="apidocSignatureSpan">utils._.</span>mapValues
+        <span class="apidocSignatureSpan">(obj, cb, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mapValues(obj, cb, thisArg) {
+  var fn = iterator(cb, thisArg);
+  var res = {};
+
+  forOwn(obj, function (val, key, orig) {
+    res[key] = fn(val, key, orig);
+  });
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.merge" id="apidoc.element.utils._.merge">
+        function <span class="apidocSignatureSpan">utils._.</span>merge
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function merge(o) {
+  if (!isPlainObject(o)) { return {}; }
+  var args = arguments;
+  var len = args.length - 1;
+
+  for (var i = 0; i &#x3c; len; i++) {
+    var obj = args[i + 1];
+
+    if (isPlainObject(obj)) {
+      for (var key in obj) {
+        if (hasOwn(obj, key)) {
+          if (isPlainObject(obj[key])) {
+            o[key] = merge(o[key], obj[key]);
+          } else {
+            o[key] = obj[key];
+          }
+        }
+      }
+    }
+  }
+  return o;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.methods" id="apidoc.element.utils._.methods">
+        function <span class="apidocSignatureSpan">utils._.</span>methods
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function methods(obj) {
+  var keys = [];
+
+  forIn(obj, function (val, key) {
+    if (typeof val === &#x27;function&#x27;) {
+      keys.push(key);
+    }
+  });
+
+  return keys;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.noop" id="apidoc.element.utils._.noop">
+        function <span class="apidocSignatureSpan">utils._.</span>noop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {
+  return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.omit" id="apidoc.element.utils._.omit">
+        function <span class="apidocSignatureSpan">utils._.</span>omit
+        <span class="apidocSignatureSpan">(obj, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function omit(obj, keys) {
+  if (!isObject(obj)) return {};
+
+  keys = [].concat.apply([], [].slice.call(arguments, 1));
+  var last = keys[keys.length - 1];
+  var res = {}, fn;
+
+  if (typeof last === &#x27;function&#x27;) {
+    fn = keys.pop();
+  }
+
+  var isFunction = typeof fn === &#x27;function&#x27;;
+  if (!keys.length &#x26;&#x26; !isFunction) {
+    return obj;
+  }
+
+  forOwn(obj, function(value, key) {
+    if (keys.indexOf(key) === -1) {
+
+      if (!isFunction) {
+        res[key] = value;
+      } else if (fn(value, key, obj)) {
+        res[key] = value;
+      }
+    }
+  });
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.partialRight" id="apidoc.element.utils._.partialRight">
+        function <span class="apidocSignatureSpan">utils._.</span>partialRight
+        <span class="apidocSignatureSpan">(ctx, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function partialRight(ctx, fn) {
+  var args = [].slice.call(arguments, 1);
+  ctx = typeof ctx !== &#x27;function&#x27; ? args.shift() : fn;
+  return function () {
+    var args = [].slice.call(arguments).concat(args);
+    return fn.apply(ctx, args);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.pascalcase" id="apidoc.element.utils._.pascalcase">
+        function <span class="apidocSignatureSpan">utils._.</span>pascalcase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pascalcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toUpperCase(); }
+  str = camelcase(str);
+  return str[0].toUpperCase() + str.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.pathcase" id="apidoc.element.utils._.pathcase">
+        function <span class="apidocSignatureSpan">utils._.</span>pathcase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pathcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[_.-\W\s]+(\w|$)/g;
+  return chop(str).replace(re, function (_, ch) {
+    return &#x27;/&#x27; + ch;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.pick" id="apidoc.element.utils._.pick">
+        function <span class="apidocSignatureSpan">utils._.</span>pick
+        <span class="apidocSignatureSpan">(obj, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pick(obj, keys) {
+  if (!isObject(obj) &#x26;&#x26; typeof obj !== &#x27;function&#x27;) {
+    return {};
+  }
+
+  var res = {};
+  if (typeof keys === &#x27;string&#x27;) {
+    if (keys in obj) {
+      res[keys] = obj[keys];
+    }
+    return res;
+  }
+
+  var len = keys.length;
+  var idx = -1;
+
+  while (++idx &#x3c; len) {
+    var key = keys[idx];
+    if (key in obj) {
+      res[key] = obj[key];
+    }
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.pluck" id="apidoc.element.utils._.pluck">
+        function <span class="apidocSignatureSpan">utils._.</span>pluck
+        <span class="apidocSignatureSpan">(obj, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pluck(obj, key) {
+  return map(obj, prop(key));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.prop" id="apidoc.element.utils._.prop">
+        function <span class="apidocSignatureSpan">utils._.</span>prop
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prop(name) {
+  return function (obj) {
+    return obj[name];
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.reduce" id="apidoc.element.utils._.reduce">
+        function <span class="apidocSignatureSpan">utils._.</span>reduce
+        <span class="apidocSignatureSpan">(o, fn, acc, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reduce(o, fn, acc, thisArg) {
+  var first = arguments.length &#x3e; 2;
+
+  if (o &#x26;&#x26; !Object.keys(o).length &#x26;&#x26; !first) {
+    return null;
+  }
+
+  forOwn(o, function (value, key, orig) {
+    if (!first) {
+      acc = value;
+      first = true;
+    } else {
+      acc = fn.call(thisArg, acc, value, key, orig);
+    }
+  });
+  return acc;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.replace" id="apidoc.element.utils._.replace">
+        function <span class="apidocSignatureSpan">utils._.</span>replace
+        <span class="apidocSignatureSpan">(str, a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replace(str, a, b) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (!a) { return str; }
+  if (!b) { b = &#x27;&#x27;; }
+  return str.split(a).join(b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api public
+ */
+
+module.exports = function camelcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[-_.\W\s]+(\w|$)/g;
+  return chop(str).<span class="apidocCodeKeywordSpan">replace</span>(re, function (_, ch) {
+    return ch.toUpperCase();
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.result" id="apidoc.element.utils._.result">
+        function <span class="apidocSignatureSpan">utils._.</span>result
+        <span class="apidocSignatureSpan">(o, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function result(o, key) {
+  var val = o[key];
+  if (typeof val === &#x27;undefined&#x27;) {
+    return;
+  }
+  if (typeOf(val) === &#x27;function&#x27;) {
+    return val.call(o);
+  }
+  return val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.reverse" id="apidoc.element.utils._.reverse">
+        function <span class="apidocSignatureSpan">utils._.</span>reverse
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reverse(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return str.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {String} `str` The string to reverse.
+ * @return {String}
+ * @api public
+ */
+
+module.exports = function reverse(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return str.split(&#x27;&#x27;).<span class="apidocCodeKeywordSpan">reverse</span>().join(&#x27;&#x27;);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.rightAlign" id="apidoc.element.utils._.rightAlign">
+        function <span class="apidocSignatureSpan">utils._.</span>rightAlign
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rightAlign(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return alignRight(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.sentencecase" id="apidoc.element.utils._.sentencecase">
+        function <span class="apidocSignatureSpan">utils._.</span>sentencecase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sentencecase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toUpperCase(); }
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.slice" id="apidoc.element.utils._.slice">
+        function <span class="apidocSignatureSpan">utils._.</span>slice
+        <span class="apidocSignatureSpan">(arr, start, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function slice(arr, start, end) {
+  var len = arr.length &#x3e;&#x3e;&#x3e; 0;
+  var range = [];
+
+  start = idx(arr, start);
+  end = idx(arr, end, len);
+
+  while (start &#x3c; end) {
+    range.push(arr[start++]);
+  }
+  return range;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api public
+ */
+
+module.exports = function after_(arr, n) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.after() expects an array.&#x27;);
+  }
+  return arr ? arr.<span class="apidocCodeKeywordSpan">slice</span>(n) : null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.slugify" id="apidoc.element.utils._.slugify">
+        function <span class="apidocSignatureSpan">utils._.</span>slugify
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function slugify(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return dashcase(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.snakecase" id="apidoc.element.utils._.snakecase">
+        function <span class="apidocSignatureSpan">utils._.</span>snakecase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function snakecase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[-_.\W\s]+(\w|$)/g;
+  return chop(str).replace(re, function (_, ch) {
+    return &#x27;_&#x27; + ch;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.some" id="apidoc.element.utils._.some">
+        function <span class="apidocSignatureSpan">utils._.</span>some
+        <span class="apidocSignatureSpan">(obj, cb, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function some(obj, cb, thisArg) {
+  cb = iterator(cb, thisArg);
+  var result = false;
+
+  forOwn(obj, function (val, key) {
+    if (cb(val, key, obj)) {
+      result = true;
+      return false; // break
+    }
+  });
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.sort" id="apidoc.element.utils._.sort">
+        function <span class="apidocSignatureSpan">utils._.</span>sort
+        <span class="apidocSignatureSpan">(arr, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sort(arr, key) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.sort() expects an array.&#x27;);
+  }
+  if (arr.length === 0) {
+    return [];
+  }
+  if (typeof key === &#x27;function&#x27;) {
+    return arr.sort(key);
+  }
+  if (typeof key !== &#x27;string&#x27;) {
+    return arr.sort();
+  }
+  return arr.sort(function(a, b) {
+    return a[key] &#x3e; b[key];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @name .sort
+ * @param {Array} `array` the array to sort.
+ * @param {String|Function} `key` The object key to sort by, or sorting function.
+ */
+
+module.exports = function sort(arr, key) {
+if (!Array.isArray(arr)) {
+  throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">sort</span>() expects an array.&#x27;);
+}
+if (arr.length === 0) {
+  return [];
+}
+if (typeof key === &#x27;function&#x27;) {
+  return arr.sort(key);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.sum" id="apidoc.element.utils._.sum">
+        function <span class="apidocSignatureSpan">utils._.</span>sum
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sum_() {
+  var args = flatten([].concat.apply([], arguments));
+  var i = args.length, sum = 0;
+  while (i--) {
+    if (!isNumber(args[i])) {
+      continue;
+    }
+    sum += (+args[i]);
+  }
+  return sum;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.toString" id="apidoc.element.utils._.toString">
+        function <span class="apidocSignatureSpan">utils._.</span>toString
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString(val) {
+  return val == null ? &#x27;&#x27; : val.toString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.truncate" id="apidoc.element.utils._.truncate">
+        function <span class="apidocSignatureSpan">utils._.</span>truncate
+        <span class="apidocSignatureSpan">(str, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function truncate(str, length) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return striptags(str).substr(0, length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.tryRead" id="apidoc.element.utils._.tryRead">
+        function <span class="apidocSignatureSpan">utils._.</span>tryRead
+        <span class="apidocSignatureSpan">(fp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tryRead(fp) {
+  try {
+    return fs.readFileSync(fp, &#x27;utf8&#x27;);
+  } catch (err) {}
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.tryReaddir" id="apidoc.element.utils._.tryReaddir">
+        function <span class="apidocSignatureSpan">utils._.</span>tryReaddir
+        <span class="apidocSignatureSpan">(dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tryReaddir(dir) {
+  try {
+    return fs.readdirSync(dir);
+  } catch (err) {}
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.tryRequire" id="apidoc.element.utils._.tryRequire">
+        function <span class="apidocSignatureSpan">utils._.</span>tryRequire
+        <span class="apidocSignatureSpan">(fp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tryRequire(fp) {
+  try {
+    return require(path.resolve(fp));
+  } catch (err) {}
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.typeOf" id="apidoc.element.utils._.typeOf">
+        function <span class="apidocSignatureSpan">utils._.</span>typeOf
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function kindOf(val) {
+  // primitivies
+  if (typeof val === &#x27;undefined&#x27;) {
+    return &#x27;undefined&#x27;;
+  }
+  if (val === null) {
+    return &#x27;null&#x27;;
+  }
+  if (val === true || val === false || val instanceof Boolean) {
+    return &#x27;boolean&#x27;;
+  }
+  if (typeof val === &#x27;string&#x27; || val instanceof String) {
+    return &#x27;string&#x27;;
+  }
+  if (typeof val === &#x27;number&#x27; || val instanceof Number) {
+    return &#x27;number&#x27;;
+  }
+
+  // functions
+  if (typeof val === &#x27;function&#x27; || val instanceof Function) {
+    return &#x27;function&#x27;;
+  }
+
+  // array
+  if (typeof Array.isArray !== &#x27;undefined&#x27; &#x26;&#x26; Array.isArray(val)) {
+    return &#x27;array&#x27;;
+  }
+
+  // check for instances of RegExp and Date before calling `toString`
+  if (val instanceof RegExp) {
+    return &#x27;regexp&#x27;;
+  }
+  if (val instanceof Date) {
+    return &#x27;date&#x27;;
+  }
+
+  // other objects
+  var type = toString.call(val);
+
+  if (type === &#x27;[object RegExp]&#x27;) {
+    return &#x27;regexp&#x27;;
+  }
+  if (type === &#x27;[object Date]&#x27;) {
+    return &#x27;date&#x27;;
+  }
+  if (type === &#x27;[object Arguments]&#x27;) {
+    return &#x27;arguments&#x27;;
+  }
+
+  // buffer
+  if (typeof Buffer !== &#x27;undefined&#x27; &#x26;&#x26; isBuffer(val)) {
+    return &#x27;buffer&#x27;;
+  }
+
+  // es6: Map, WeakMap, Set, WeakSet
+  if (type === &#x27;[object Set]&#x27;) {
+    return &#x27;set&#x27;;
+  }
+  if (type === &#x27;[object WeakSet]&#x27;) {
+    return &#x27;weakset&#x27;;
+  }
+  if (type === &#x27;[object Map]&#x27;) {
+    return &#x27;map&#x27;;
+  }
+  if (type === &#x27;[object WeakMap]&#x27;) {
+    return &#x27;weakmap&#x27;;
+  }
+  if (type === &#x27;[object Symbol]&#x27;) {
+    return &#x27;symbol&#x27;;
+  }
+
+  // must be a plain object
+  return &#x27;object&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.union" id="apidoc.element.utils._.union">
+        function <span class="apidocSignatureSpan">utils._.</span>union
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function union_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.union() expects an array.&#x27;);
+  }
+  return union.apply(union, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {Array} `array` The array to uniquify
+ * @return {Array} With all union values.
+ * @api public
+ */
+
+module.exports = function union_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">union</span>() expects an array.&#x27;);
+  }
+  return union.apply(union, arguments);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.unique" id="apidoc.element.utils._.unique">
+        function <span class="apidocSignatureSpan">utils._.</span>unique
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unique_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.unique() expects an array.&#x27;);
+  }
+  return uniq.apply(uniq, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {Array} `array` The array to uniquify
+ * @return {Array} With all unique values.
+ * @api public
+ */
+
+module.exports = function unique_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">unique</span>() expects an array.&#x27;);
+  }
+  return uniq.apply(uniq, arguments);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils._.wordwrap" id="apidoc.element.utils._.wordwrap">
+        function <span class="apidocSignatureSpan">utils._.</span>wordwrap
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wordwrap(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return wrap.apply(wrap, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utils.array" id="apidoc.module.utils.array">module utils.array</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.after" id="apidoc.element.utils.array.after">
+        function <span class="apidocSignatureSpan">utils.array.</span>after
+        <span class="apidocSignatureSpan">(arr, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function after_(arr, n) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.after() expects an array.&#x27;);
+  }
+  return arr ? arr.slice(n) : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @return {Array} Array exluding `n` items.
+ * @crosslink before
+ * @api public
+ */
+
+module.exports = function after_(arr, n) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">after</span>() expects an array.&#x27;);
+  }
+  return arr ? arr.slice(n) : null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.arrayify" id="apidoc.element.utils.array.arrayify">
+        function <span class="apidocSignatureSpan">utils.array.</span>arrayify
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function arrayify(val) {
+  return !Array.isArray(val) ? [val] : val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.before" id="apidoc.element.utils.array.before">
+        function <span class="apidocSignatureSpan">utils.array.</span>before
+        <span class="apidocSignatureSpan">(arr, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function before(arr, n) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.before() expects an array.&#x27;);
+  }
+  return arr ? arr.slice(0, -n) : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @return {Array} Array excluding items after the given number.
+ * @crosslink after
+ * @api public
+ */
+
+module.exports = function before(arr, n) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">before</span>() expects an array.&#x27;);
+  }
+  return arr ? arr.slice(0, -n) : null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.compact" id="apidoc.element.utils.array.compact">
+        function <span class="apidocSignatureSpan">utils.array.</span>compact
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compact(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.compact() expects an array.&#x27;);
+  }
+  return arr.filter(Boolean);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Array} `arr`
+ * @return {Array}
+ * @api public
+ */
+
+module.exports = function compact(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">compact</span>() expects an array.&#x27;);
+  }
+  return arr.filter(Boolean);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.difference" id="apidoc.element.utils.array.difference">
+        function <span class="apidocSignatureSpan">utils.array.</span>difference
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function difference_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.difference() expects an array.&#x27;);
+  }
+  return diff.apply(diff, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {Array} `b`
+ * @return {Array}
+ * @api public
+ */
+
+module.exports = function difference_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">difference</span>() expects an array.&#x27;);
+  }
+  return diff.apply(diff, arguments);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.each" id="apidoc.element.utils.array.each">
+        function <span class="apidocSignatureSpan">utils.array.</span>each
+        <span class="apidocSignatureSpan">(arr, cb, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function each(arr, cb, thisArg) {
+  if (arr == null) return;
+
+  var len = arr.length, i = -1;
+
+  while (len--) {
+    var ele = arr[++i];
+    if (cb.call(thisArg, ele, i, arr) === false) {
+      break;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.first" id="apidoc.element.utils.array.first">
+        function <span class="apidocSignatureSpan">utils.array.</span>first
+        <span class="apidocSignatureSpan">(arr, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function first(arr, fn) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.first() expects an array.&#x27;);
+  }
+
+  var len = arr.length;
+  if (len === 0) {
+    return [];
+  }
+
+  if (!fn) return arr[0];
+
+  if (isNumber(fn)) {
+    return arr.slice(0, fn);
+  }
+
+  if (typeof fn === &#x27;function&#x27;) {
+    var val, i = 0;
+
+    while (len--) {
+      val = arr[i++];
+      if (fn(val, i, arr)) {
+        return val;
+      }
+    }
+  }
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Number} `n` Number of items to return, starting at `0`.
+ * @return {Array}
+ * @api public
+ */
+
+module.exports = function first(arr, fn) {
+if (!Array.isArray(arr)) {
+  throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">first</span>() expects an array.&#x27;);
+}
+
+var len = arr.length;
+if (len === 0) {
+  return [];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.flatten" id="apidoc.element.utils.array.flatten">
+        function <span class="apidocSignatureSpan">utils.array.</span>flatten
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function flatten(arr) {
+  return flat(arr, []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.forEach" id="apidoc.element.utils.array.forEach">
+        function <span class="apidocSignatureSpan">utils.array.</span>forEach
+        <span class="apidocSignatureSpan">(arr, cb, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function each(arr, cb, thisArg) {
+  if (arr == null) return;
+
+  var len = arr.length, i = -1;
+
+  while (len--) {
+    var ele = arr[++i];
+    if (cb.call(thisArg, ele, i, arr) === false) {
+      break;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.indexOf" id="apidoc.element.utils.array.indexOf">
+        function <span class="apidocSignatureSpan">utils.array.</span>indexOf
+        <span class="apidocSignatureSpan">(arr, ele, start)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function indexOf(arr, ele, start) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.indexOf() expects an array.&#x27;);
+  }
+
+  if (typeof ele === &#x27;undefined&#x27;) return -1;
+  start = start || 0;
+
+  var len = arr.length;
+  var i = start &#x3c; 0
+    ? len + start
+    : start;
+
+  while (i &#x3c; len) {
+    if (arr[i] === ele) {
+      return i;
+    }
+    i++;
+  }
+  return -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {String} `ele` The element to find.
+ * @param  {Array} `start` Starting index.
+ * @return {Number} Returns the index of `ele` or `-1`
+ */
+
+module.exports = function indexOf(arr, ele, start) {
+if (!Array.isArray(arr)) {
+  throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">indexOf</span>() expects an array.&#x27;);
+}
+
+if (typeof ele === &#x27;undefined&#x27;) return -1;
+start = start || 0;
+
+var len = arr.length;
+var i = start &#x3c; 0
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.isArray" id="apidoc.element.utils.array.isArray">
+        function <span class="apidocSignatureSpan">utils.array.</span>isArray
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArray(value) {
+  return Array.isArray(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Number} `n` Starting index (number of items to exclude)
+ * @return {Array} Array exluding `n` items.
+ * @crosslink before
+ * @api public
+ */
+
+module.exports = function after_(arr, n) {
+  if (!Array.<span class="apidocCodeKeywordSpan">isArray</span>(arr)) {
+    throw new TypeError(&#x27;utils#array.after() expects an array.&#x27;);
+  }
+  return arr ? arr.slice(n) : null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.last" id="apidoc.element.utils.array.last">
+        function <span class="apidocSignatureSpan">utils.array.</span>last
+        <span class="apidocSignatureSpan">(arr, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function last_(arr, fn) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.last() expects an array.&#x27;);
+  }
+
+  var len = arr.length;
+  if (len === 0) {
+    return [];
+  }
+
+  if (!fn) return arr[arr.length - 1];
+
+  if (isNumber(fn)) {
+    return arr.slice(-fn);
+  }
+
+  if (typeof fn === &#x27;function&#x27;) {
+    var val, i = 0;
+
+    while (len--) {
+      val = arr[i++];
+      if (fn(val, i, arr)) {
+        return val;
+      }
+    }
+  }
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Number} `n` Number of items to return, starting with the last item.
+ * @return {Array}
+ * @api public
+ */
+
+module.exports = function last_(arr, fn) {
+if (!Array.isArray(arr)) {
+  throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">last</span>() expects an array.&#x27;);
+}
+
+var len = arr.length;
+if (len === 0) {
+  return [];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.map" id="apidoc.element.utils.array.map">
+        function <span class="apidocSignatureSpan">utils.array.</span>map
+        <span class="apidocSignatureSpan">(arr, fn, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function map(arr, fn, thisArg) {
+  if (arr == null) return [];
+  fn = iterator(fn, thisArg);
+
+  var len = arr.length;
+  var res = new Array(len);
+
+  for (var i = 0; i &#x3c; len; i++) {
+    res[i] = fn(arr[i], i, arr);
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.slice" id="apidoc.element.utils.array.slice">
+        function <span class="apidocSignatureSpan">utils.array.</span>slice
+        <span class="apidocSignatureSpan">(arr, start, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function slice(arr, start, end) {
+  var len = arr.length &#x3e;&#x3e;&#x3e; 0;
+  var range = [];
+
+  start = idx(arr, start);
+  end = idx(arr, end, len);
+
+  while (start &#x3c; end) {
+    range.push(arr[start++]);
+  }
+  return range;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api public
+ */
+
+module.exports = function after_(arr, n) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.after() expects an array.&#x27;);
+  }
+  return arr ? arr.<span class="apidocCodeKeywordSpan">slice</span>(n) : null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.sort" id="apidoc.element.utils.array.sort">
+        function <span class="apidocSignatureSpan">utils.array.</span>sort
+        <span class="apidocSignatureSpan">(arr, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sort(arr, key) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.sort() expects an array.&#x27;);
+  }
+  if (arr.length === 0) {
+    return [];
+  }
+  if (typeof key === &#x27;function&#x27;) {
+    return arr.sort(key);
+  }
+  if (typeof key !== &#x27;string&#x27;) {
+    return arr.sort();
+  }
+  return arr.sort(function(a, b) {
+    return a[key] &#x3e; b[key];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @name .sort
+ * @param {Array} `array` the array to sort.
+ * @param {String|Function} `key` The object key to sort by, or sorting function.
+ */
+
+module.exports = function sort(arr, key) {
+if (!Array.isArray(arr)) {
+  throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">sort</span>() expects an array.&#x27;);
+}
+if (arr.length === 0) {
+  return [];
+}
+if (typeof key === &#x27;function&#x27;) {
+  return arr.sort(key);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.union" id="apidoc.element.utils.array.union">
+        function <span class="apidocSignatureSpan">utils.array.</span>union
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function union_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.union() expects an array.&#x27;);
+  }
+  return union.apply(union, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {Array} `array` The array to uniquify
+ * @return {Array} With all union values.
+ * @api public
+ */
+
+module.exports = function union_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">union</span>() expects an array.&#x27;);
+  }
+  return union.apply(union, arguments);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.array.unique" id="apidoc.element.utils.array.unique">
+        function <span class="apidocSignatureSpan">utils.array.</span>unique
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unique_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.unique() expects an array.&#x27;);
+  }
+  return uniq.apply(uniq, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {Array} `array` The array to uniquify
+ * @return {Array} With all unique values.
+ * @api public
+ */
+
+module.exports = function unique_(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.<span class="apidocCodeKeywordSpan">unique</span>() expects an array.&#x27;);
+  }
+  return uniq.apply(uniq, arguments);
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utils.collection" id="apidoc.module.utils.collection">module utils.collection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utils.collection.any" id="apidoc.element.utils.collection.any">
+        function <span class="apidocSignatureSpan">utils.collection.</span>any
+        <span class="apidocSignatureSpan">(value, fn, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function any(value, fn, thisArg) {
+  if (value == null) {
+    return false;
+  }
+
+  // strings
+  if(typeof value === &#x27;string&#x27; &#x26;&#x26; typeof fn === &#x27;string&#x27;) {
+    return value.indexOf(fn) !== -1;
+  }
+
+  // object key
+  if (typeof fn === &#x27;string&#x27;) {
+    if (value.hasOwnProperty(fn)) {
+      return true;
+    }
+  }
+
+  fn = iterator(fn, thisArg);
+  var res = false;
+
+  // arrays or arguments
+  if(typeof value.length === &#x27;number&#x27;) {
+    var len = value.length;
+    var i = -1;
+
+    while (++i &#x3c; len) {
+      if (fn(value[i], i, value)) {
+        res = true;
+        break;
+      }
+    }
+
+  // object properties/values
+  } else {
+    forOwn(value, function (val, key) {
+      if (fn(val, key, value)) {
+        res = true;
+        return false;
+      }
+    });
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.collection.contains" id="apidoc.element.utils.collection.contains">
+        function <span class="apidocSignatureSpan">utils.collection.</span>contains
+        <span class="apidocSignatureSpan">(collection, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function contains(collection, val) {
+  if (Array.isArray(collection)) {
+    return indexOf(collection, val) !== -1;
+  }
+  return some(collection, function (v) {
+    return (v === val);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utils.fs" id="apidoc.module.utils.fs">module utils.fs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utils.fs.tryRead" id="apidoc.element.utils.fs.tryRead">
+        function <span class="apidocSignatureSpan">utils.fs.</span>tryRead
+        <span class="apidocSignatureSpan">(fp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tryRead(fp) {
+  try {
+    return fs.readFileSync(fp, &#x27;utf8&#x27;);
+  } catch (err) {}
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.fs.tryReaddir" id="apidoc.element.utils.fs.tryReaddir">
+        function <span class="apidocSignatureSpan">utils.fs.</span>tryReaddir
+        <span class="apidocSignatureSpan">(dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tryReaddir(dir) {
+  try {
+    return fs.readdirSync(dir);
+  } catch (err) {}
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.fs.tryRequire" id="apidoc.element.utils.fs.tryRequire">
+        function <span class="apidocSignatureSpan">utils.fs.</span>tryRequire
+        <span class="apidocSignatureSpan">(fp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tryRequire(fp) {
+  try {
+    return require(path.resolve(fp));
+  } catch (err) {}
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utils.function" id="apidoc.module.utils.function">module utils.function</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utils.function.identity" id="apidoc.element.utils.function.identity">
+        function <span class="apidocSignatureSpan">utils.function.</span>identity
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(val) {
+  return val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.function.noop" id="apidoc.element.utils.function.noop">
+        function <span class="apidocSignatureSpan">utils.function.</span>noop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {
+  return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.function.partialRight" id="apidoc.element.utils.function.partialRight">
+        function <span class="apidocSignatureSpan">utils.function.</span>partialRight
+        <span class="apidocSignatureSpan">(ctx, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function partialRight(ctx, fn) {
+  var args = [].slice.call(arguments, 1);
+  ctx = typeof ctx !== &#x27;function&#x27; ? args.shift() : fn;
+  return function () {
+    var args = [].slice.call(arguments).concat(args);
+    return fn.apply(ctx, args);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utils.lang" id="apidoc.module.utils.lang">module utils.lang</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utils.lang.hasValues" id="apidoc.element.utils.lang.hasValues">
+        function <span class="apidocSignatureSpan">utils.lang.</span>hasValues
+        <span class="apidocSignatureSpan">(o, noZero)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasValue(o, noZero) {
+  if (o === null || o === undefined) {
+    return false;
+  }
+
+  if (typeof o === &#x27;boolean&#x27;) {
+    return true;
+  }
+
+  if (typeof o === &#x27;number&#x27;) {
+    if (o === 0 &#x26;&#x26; noZero === true) {
+      return false;
+    }
+    return true;
+  }
+
+  if (o.length !== undefined) {
+    return o.length !== 0;
+  }
+
+  for (var key in o) {
+    if (o.hasOwnProperty(key)) {
+      return true;
+    }
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.lang.isEmpty" id="apidoc.element.utils.lang.isEmpty">
+        function <span class="apidocSignatureSpan">utils.lang.</span>isEmpty
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isEmpty(val) {
+  return !hasValues(val);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.lang.isObject" id="apidoc.element.utils.lang.isObject">
+        function <span class="apidocSignatureSpan">utils.lang.</span>isObject
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isObject(val) {
+  return typeOf(val) === &#x27;object&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.lang.isPlainObject" id="apidoc.element.utils.lang.isPlainObject">
+        function <span class="apidocSignatureSpan">utils.lang.</span>isPlainObject
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isPlainObject(o) {
+  var ctor,prot;
+
+  if (isObjectObject(o) === false) return false;
+
+  // If has modified constructor
+  ctor = o.constructor;
+  if (typeof ctor !== &#x27;function&#x27;) return false;
+
+  // If has modified prototype
+  prot = ctor.prototype;
+  if (isObjectObject(prot) === false) return false;
+
+  // If constructor does not have an Object-specific method
+  if (prot.hasOwnProperty(&#x27;isPrototypeOf&#x27;) === false) {
+    return false;
+  }
+
+  // Most likely a plain Object
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.lang.typeOf" id="apidoc.element.utils.lang.typeOf">
+        function <span class="apidocSignatureSpan">utils.lang.</span>typeOf
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function kindOf(val) {
+  // primitivies
+  if (typeof val === &#x27;undefined&#x27;) {
+    return &#x27;undefined&#x27;;
+  }
+  if (val === null) {
+    return &#x27;null&#x27;;
+  }
+  if (val === true || val === false || val instanceof Boolean) {
+    return &#x27;boolean&#x27;;
+  }
+  if (typeof val === &#x27;string&#x27; || val instanceof String) {
+    return &#x27;string&#x27;;
+  }
+  if (typeof val === &#x27;number&#x27; || val instanceof Number) {
+    return &#x27;number&#x27;;
+  }
+
+  // functions
+  if (typeof val === &#x27;function&#x27; || val instanceof Function) {
+    return &#x27;function&#x27;;
+  }
+
+  // array
+  if (typeof Array.isArray !== &#x27;undefined&#x27; &#x26;&#x26; Array.isArray(val)) {
+    return &#x27;array&#x27;;
+  }
+
+  // check for instances of RegExp and Date before calling `toString`
+  if (val instanceof RegExp) {
+    return &#x27;regexp&#x27;;
+  }
+  if (val instanceof Date) {
+    return &#x27;date&#x27;;
+  }
+
+  // other objects
+  var type = toString.call(val);
+
+  if (type === &#x27;[object RegExp]&#x27;) {
+    return &#x27;regexp&#x27;;
+  }
+  if (type === &#x27;[object Date]&#x27;) {
+    return &#x27;date&#x27;;
+  }
+  if (type === &#x27;[object Arguments]&#x27;) {
+    return &#x27;arguments&#x27;;
+  }
+
+  // buffer
+  if (typeof Buffer !== &#x27;undefined&#x27; &#x26;&#x26; isBuffer(val)) {
+    return &#x27;buffer&#x27;;
+  }
+
+  // es6: Map, WeakMap, Set, WeakSet
+  if (type === &#x27;[object Set]&#x27;) {
+    return &#x27;set&#x27;;
+  }
+  if (type === &#x27;[object WeakSet]&#x27;) {
+    return &#x27;weakset&#x27;;
+  }
+  if (type === &#x27;[object Map]&#x27;) {
+    return &#x27;map&#x27;;
+  }
+  if (type === &#x27;[object WeakMap]&#x27;) {
+    return &#x27;weakmap&#x27;;
+  }
+  if (type === &#x27;[object Symbol]&#x27;) {
+    return &#x27;symbol&#x27;;
+  }
+
+  // must be a plain object
+  return &#x27;object&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utils.math" id="apidoc.module.utils.math">module utils.math</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utils.math.sum" id="apidoc.element.utils.math.sum">
+        function <span class="apidocSignatureSpan">utils.math.</span>sum
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sum_() {
+  var args = flatten([].concat.apply([], arguments));
+  var i = args.length, sum = 0;
+  while (i--) {
+    if (!isNumber(args[i])) {
+      continue;
+    }
+    sum += (+args[i]);
+  }
+  return sum;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utils.object" id="apidoc.module.utils.object">module utils.object</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.defaults" id="apidoc.element.utils.object.defaults">
+        function <span class="apidocSignatureSpan">utils.object.</span>defaults
+        <span class="apidocSignatureSpan">(o, objects)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defaults(o, objects) {
+  if (o == null) return {};
+
+  each(slice(arguments, 1), function (obj) {
+    if (isObject(obj)) {
+      forOwn(obj, function (val, key) {
+        if (o[key] == null) {
+          o[key] = val;
+        }
+      });
+    }
+  });
+  return o;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.extend" id="apidoc.element.utils.object.extend">
+        function <span class="apidocSignatureSpan">utils.object.</span>extend
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(o) {
+  if (!isPlainObject(o)) { return {}; }
+  var args = arguments;
+  var len = args.length - 1;
+
+  for (var i = 0; i &#x3c; len; i++) {
+    var obj = args[i + 1];
+
+    if (isPlainObject(obj)) {
+      for (var key in obj) {
+        if (hasOwn(obj, key)) {
+          o[key] = obj[key];
+        }
+      }
+    }
+  }
+  return o;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.filter" id="apidoc.element.utils.object.filter">
+        function <span class="apidocSignatureSpan">utils.object.</span>filter
+        <span class="apidocSignatureSpan">(o, cb, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function filter(o, cb, thisArg) {
+  cb = makeIterator(cb, thisArg);
+  var filtered = {};
+
+  forOwn(o, function (value, key, o) {
+    if (cb(value, key, o)) {
+      filtered[key] = value;
+    }
+  });
+
+  return filtered;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api public
+ */
+
+module.exports = function compact(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError(&#x27;utils#array.compact() expects an array.&#x27;);
+  }
+  return arr.<span class="apidocCodeKeywordSpan">filter</span>(Boolean);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.forIn" id="apidoc.element.utils.object.forIn">
+        function <span class="apidocSignatureSpan">utils.object.</span>forIn
+        <span class="apidocSignatureSpan">(obj, fn, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function forIn(obj, fn, thisArg) {
+  for (var key in obj) {
+    if (fn.call(thisArg, obj[key], key, obj) === false) {
+      break;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.forOwn" id="apidoc.element.utils.object.forOwn">
+        function <span class="apidocSignatureSpan">utils.object.</span>forOwn
+        <span class="apidocSignatureSpan">(obj, fn, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function forOwn(obj, fn, thisArg) {
+  forIn(obj, function(val, key) {
+    if (hasOwn.call(obj, key)) {
+      return fn.call(thisArg, obj[key], key, obj);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.functions" id="apidoc.element.utils.object.functions">
+        function <span class="apidocSignatureSpan">utils.object.</span>functions
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function functions(obj) {
+  var res = {};
+
+  forIn(obj, function (val, key) {
+    if (typeof val === &#x27;function&#x27;) {
+      res[key] = val;
+    }
+  });
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.hasOwn" id="apidoc.element.utils.object.hasOwn">
+        function <span class="apidocSignatureSpan">utils.object.</span>hasOwn
+        <span class="apidocSignatureSpan">(o, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasOwn(o, key) {
+  return {}.hasOwnProperty.call(o, key);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.keys" id="apidoc.element.utils.object.keys">
+        function <span class="apidocSignatureSpan">utils.object.</span>keys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function keys() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.mapValues" id="apidoc.element.utils.object.mapValues">
+        function <span class="apidocSignatureSpan">utils.object.</span>mapValues
+        <span class="apidocSignatureSpan">(obj, cb, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mapValues(obj, cb, thisArg) {
+  var fn = iterator(cb, thisArg);
+  var res = {};
+
+  forOwn(obj, function (val, key, orig) {
+    res[key] = fn(val, key, orig);
+  });
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.merge" id="apidoc.element.utils.object.merge">
+        function <span class="apidocSignatureSpan">utils.object.</span>merge
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function merge(o) {
+  if (!isPlainObject(o)) { return {}; }
+  var args = arguments;
+  var len = args.length - 1;
+
+  for (var i = 0; i &#x3c; len; i++) {
+    var obj = args[i + 1];
+
+    if (isPlainObject(obj)) {
+      for (var key in obj) {
+        if (hasOwn(obj, key)) {
+          if (isPlainObject(obj[key])) {
+            o[key] = merge(o[key], obj[key]);
+          } else {
+            o[key] = obj[key];
+          }
+        }
+      }
+    }
+  }
+  return o;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.methods" id="apidoc.element.utils.object.methods">
+        function <span class="apidocSignatureSpan">utils.object.</span>methods
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function methods(obj) {
+  var keys = [];
+
+  forIn(obj, function (val, key) {
+    if (typeof val === &#x27;function&#x27;) {
+      keys.push(key);
+    }
+  });
+
+  return keys;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.omit" id="apidoc.element.utils.object.omit">
+        function <span class="apidocSignatureSpan">utils.object.</span>omit
+        <span class="apidocSignatureSpan">(obj, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function omit(obj, keys) {
+  if (!isObject(obj)) return {};
+
+  keys = [].concat.apply([], [].slice.call(arguments, 1));
+  var last = keys[keys.length - 1];
+  var res = {}, fn;
+
+  if (typeof last === &#x27;function&#x27;) {
+    fn = keys.pop();
+  }
+
+  var isFunction = typeof fn === &#x27;function&#x27;;
+  if (!keys.length &#x26;&#x26; !isFunction) {
+    return obj;
+  }
+
+  forOwn(obj, function(value, key) {
+    if (keys.indexOf(key) === -1) {
+
+      if (!isFunction) {
+        res[key] = value;
+      } else if (fn(value, key, obj)) {
+        res[key] = value;
+      }
+    }
+  });
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.pick" id="apidoc.element.utils.object.pick">
+        function <span class="apidocSignatureSpan">utils.object.</span>pick
+        <span class="apidocSignatureSpan">(obj, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pick(obj, keys) {
+  if (!isObject(obj) &#x26;&#x26; typeof obj !== &#x27;function&#x27;) {
+    return {};
+  }
+
+  var res = {};
+  if (typeof keys === &#x27;string&#x27;) {
+    if (keys in obj) {
+      res[keys] = obj[keys];
+    }
+    return res;
+  }
+
+  var len = keys.length;
+  var idx = -1;
+
+  while (++idx &#x3c; len) {
+    var key = keys[idx];
+    if (key in obj) {
+      res[key] = obj[key];
+    }
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.pluck" id="apidoc.element.utils.object.pluck">
+        function <span class="apidocSignatureSpan">utils.object.</span>pluck
+        <span class="apidocSignatureSpan">(obj, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pluck(obj, key) {
+  return map(obj, prop(key));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.prop" id="apidoc.element.utils.object.prop">
+        function <span class="apidocSignatureSpan">utils.object.</span>prop
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prop(name) {
+  return function (obj) {
+    return obj[name];
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.reduce" id="apidoc.element.utils.object.reduce">
+        function <span class="apidocSignatureSpan">utils.object.</span>reduce
+        <span class="apidocSignatureSpan">(o, fn, acc, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reduce(o, fn, acc, thisArg) {
+  var first = arguments.length &#x3e; 2;
+
+  if (o &#x26;&#x26; !Object.keys(o).length &#x26;&#x26; !first) {
+    return null;
+  }
+
+  forOwn(o, function (value, key, orig) {
+    if (!first) {
+      acc = value;
+      first = true;
+    } else {
+      acc = fn.call(thisArg, acc, value, key, orig);
+    }
+  });
+  return acc;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.result" id="apidoc.element.utils.object.result">
+        function <span class="apidocSignatureSpan">utils.object.</span>result
+        <span class="apidocSignatureSpan">(o, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function result(o, key) {
+  var val = o[key];
+  if (typeof val === &#x27;undefined&#x27;) {
+    return;
+  }
+  if (typeOf(val) === &#x27;function&#x27;) {
+    return val.call(o);
+  }
+  return val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.object.some" id="apidoc.element.utils.object.some">
+        function <span class="apidocSignatureSpan">utils.object.</span>some
+        <span class="apidocSignatureSpan">(obj, cb, thisArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function some(obj, cb, thisArg) {
+  cb = iterator(cb, thisArg);
+  var result = false;
+
+  forOwn(obj, function (val, key) {
+    if (cb(val, key, obj)) {
+      result = true;
+      return false; // break
+    }
+  });
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utils.string" id="apidoc.module.utils.string">module utils.string</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.camelcase" id="apidoc.element.utils.string.camelcase">
+        function <span class="apidocSignatureSpan">utils.string.</span>camelcase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function camelcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[-_.\W\s]+(\w|$)/g;
+  return chop(str).replace(re, function (_, ch) {
+    return ch.toUpperCase();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.centerAlign" id="apidoc.element.utils.string.centerAlign">
+        function <span class="apidocSignatureSpan">utils.string.</span>centerAlign
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function centerAlign(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return alignCenter(str, &#x27;&#x26;nbsp;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.chop" id="apidoc.element.utils.string.chop">
+        function <span class="apidocSignatureSpan">utils.string.</span>chop
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function chop(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  var re = /^[-_.\W\s]+|[-_.\W\s]+$/g;
+  return str.trim().replace(re, &#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.count" id="apidoc.element.utils.string.count">
+        function <span class="apidocSignatureSpan">utils.string.</span>count
+        <span class="apidocSignatureSpan">(str, sub)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function count(str, sub) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return sub ? (str.split(sub).length - 1) : &#x27;0&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.dashcase" id="apidoc.element.utils.string.dashcase">
+        function <span class="apidocSignatureSpan">utils.string.</span>dashcase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dashcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[-_.\W\s]+(\w|$)/g;
+  return chop(str).replace(re, function (_, ch) {
+    return &#x27;-&#x27; + ch;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.dotcase" id="apidoc.element.utils.string.dotcase">
+        function <span class="apidocSignatureSpan">utils.string.</span>dotcase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dotcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[-_.\W\s]+(\w|$)/g;
+  return chop(str).replace(re, function (_, ch) {
+    return &#x27;.&#x27; + ch;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.ellipsis" id="apidoc.element.utils.string.ellipsis">
+        function <span class="apidocSignatureSpan">utils.string.</span>ellipsis
+        <span class="apidocSignatureSpan">(str, limit, ch)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ellipsis(str, limit, ch) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return truncate(str, limit) + (ch || &#x27;…&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.hyphenate" id="apidoc.element.utils.string.hyphenate">
+        function <span class="apidocSignatureSpan">utils.string.</span>hyphenate
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hyphenate(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return chop(str).split(&#x27; &#x27;).join(&#x27;-&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.isString" id="apidoc.element.utils.string.isString">
+        function <span class="apidocSignatureSpan">utils.string.</span>isString
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isString(str) {
+  return str &#x26;&#x26; typeof str === &#x27;string&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.pascalcase" id="apidoc.element.utils.string.pascalcase">
+        function <span class="apidocSignatureSpan">utils.string.</span>pascalcase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pascalcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toUpperCase(); }
+  str = camelcase(str);
+  return str[0].toUpperCase() + str.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.pathcase" id="apidoc.element.utils.string.pathcase">
+        function <span class="apidocSignatureSpan">utils.string.</span>pathcase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pathcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[_.-\W\s]+(\w|$)/g;
+  return chop(str).replace(re, function (_, ch) {
+    return &#x27;/&#x27; + ch;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.replace" id="apidoc.element.utils.string.replace">
+        function <span class="apidocSignatureSpan">utils.string.</span>replace
+        <span class="apidocSignatureSpan">(str, a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replace(str, a, b) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (!a) { return str; }
+  if (!b) { b = &#x27;&#x27;; }
+  return str.split(a).join(b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api public
+ */
+
+module.exports = function camelcase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[-_.\W\s]+(\w|$)/g;
+  return chop(str).<span class="apidocCodeKeywordSpan">replace</span>(re, function (_, ch) {
+    return ch.toUpperCase();
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.reverse" id="apidoc.element.utils.string.reverse">
+        function <span class="apidocSignatureSpan">utils.string.</span>reverse
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reverse(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return str.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {String} `str` The string to reverse.
+ * @return {String}
+ * @api public
+ */
+
+module.exports = function reverse(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return str.split(&#x27;&#x27;).<span class="apidocCodeKeywordSpan">reverse</span>().join(&#x27;&#x27;);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.rightAlign" id="apidoc.element.utils.string.rightAlign">
+        function <span class="apidocSignatureSpan">utils.string.</span>rightAlign
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rightAlign(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return alignRight(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.sentencecase" id="apidoc.element.utils.string.sentencecase">
+        function <span class="apidocSignatureSpan">utils.string.</span>sentencecase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sentencecase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toUpperCase(); }
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.slugify" id="apidoc.element.utils.string.slugify">
+        function <span class="apidocSignatureSpan">utils.string.</span>slugify
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function slugify(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return dashcase(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.snakecase" id="apidoc.element.utils.string.snakecase">
+        function <span class="apidocSignatureSpan">utils.string.</span>snakecase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function snakecase(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  if (str.length === 1) {return str.toLowerCase(); }
+  var re = /[-_.\W\s]+(\w|$)/g;
+  return chop(str).replace(re, function (_, ch) {
+    return &#x27;_&#x27; + ch;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.toString" id="apidoc.element.utils.string.toString">
+        function <span class="apidocSignatureSpan">utils.string.</span>toString
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString(val) {
+  return val == null ? &#x27;&#x27; : val.toString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.truncate" id="apidoc.element.utils.string.truncate">
+        function <span class="apidocSignatureSpan">utils.string.</span>truncate
+        <span class="apidocSignatureSpan">(str, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function truncate(str, length) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return striptags(str).substr(0, length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utils.string.wordwrap" id="apidoc.element.utils.string.wordwrap">
+        function <span class="apidocSignatureSpan">utils.string.</span>wordwrap
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wordwrap(str) {
+  if (!isString(str)) return &#x27;&#x27;;
+  return wrap.apply(wrap, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
